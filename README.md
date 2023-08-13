@@ -1,7 +1,7 @@
 # LTN-Logistic-Provider
 A factorio blueprint design for a sophisticated train stop that can dynamically provide many items of different types to trains loading cargo. Please see [Very Important Settings](#very-important-settings) below before using.
 
-See [Releases](https://github.com/xane256/LTN-Logistic-Provider/releases) for the latest design.
+➡️ See [Releases](https://github.com/xane256/LTN-Logistic-Provider/releases) for the latest design.
 
 # What is This?
 - This is a provider train stop designed for use with LTN and AAI Containers (Space Exploration) that can provide many items via logistics bots to a train where LTN handles all the requests and decides what items to request on the train. The design has gone through several iterations of revision on the circuit design and many hours of successful playtesting and tweaking in a space exploration world.
