@@ -6,7 +6,6 @@ A factorio blueprint design for a sophisticated train stop that can dynamically 
 - Requester stops can request many items at once with LTN. The LTN Scheduler can use this train stop to provide whatever items are in your logistics mall / network.
 - This station pairs well with the multi-item requester in the same book.
 - There's a [mod](https://mods.factorio.com/mod/se-ltn-glue) that enables LTN to schedule deliveries through the space elevator. Make sure to CLICK the space elevator to open network ID setting that the mod will use for deliveries through the elevator.
-
 - COMING SOON: A "caching" version that is optimized for bulkier deliveries where items are loaded into chests ahead of time.
 
 # Requester Station
