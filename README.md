@@ -1,6 +1,7 @@
 # LTN-Logistic-Provider
-A factorio blueprint design for a sophisticated train stop that can dynamically provide many items of different types to trains loading cargo. Please see [Very Important Settings](#very-important-settings) below before using.
+A factorio blueprint design for a sophisticated train stop that can dynamically provide many items of different types to trains loading cargo.
 
+- ⚠️ Please see [Very Important Settings](#very-important-settings) below before using.
 ➡️ See [Releases](https://github.com/xane256/LTN-Logistic-Provider/releases) for the latest design.
 
 # What is This?
