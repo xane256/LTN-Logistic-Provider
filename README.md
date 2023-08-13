@@ -7,6 +7,8 @@ A factorio blueprint design for a sophisticated train stop that can dynamically 
 - This station pairs well with the multi-item requester in the same book.
 - There's a [mod](https://mods.factorio.com/mod/se-ltn-glue) that enables LTN to schedule deliveries through the space elevator. Make sure to CLICK the space elevator to open network ID setting that the mod will use for deliveries through the elevator.
 
+- COMING SOON: A "caching" version that is optimized for bulkier deliveries where items are loaded into chests ahead of time.
+
 # Requester Station
 - There's a requester station that is useful for building factories or making temporary requests. Reuquests go in 2 sets of combinators. Green wire = temporary (one-time) requests. Useful for requesting buildings or buiding materials. Red wire = recurring requests that try to keep the logistics network stocked. USE POSITIVE NUMBERS FOR REQUESTS.
 - There's a constant combinator that emits the signal R with value 1 when it is switched on.
@@ -29,12 +31,14 @@ A factorio blueprint design for a sophisticated train stop that can dynamically 
 
 # FAQ
 Q: There's items leftover in inserter hands after trains leave! Are my trains at risk of getting incorrect items?
-A: No. This behavior is unusual (due to stack size signals) but totally normal. The items will get loaded and unloaded from the next train before that train leaves the station.
+- A: No. This behavior is unusual (due to stack size signals) but totally normal. The items will get loaded and unloaded from the next train before that train leaves the station.
+
 
 Q: Why are there buffer chests and requester chests?
-A: This addresses a behavior where a small number of rare items are requested, and there are so few available that due to division / modulus math, 8 out of 10 train-loading inserters are disabled even though the chest behind has items. The fix used here is to use bots to move the items from green chests to blue chest. Another fix that is very likely to work just fine is to connect all 10 train-loading inserters together with a red wire, repeat for each cargo wagon.
+- A: This addresses a behavior where a small number of rare items are requested, and there are so few available that due to division / modulus math, 8 out of 10 train-loading inserters are disabled even though the chest behind has items. The fix used here is to use bots to move the items from green chests to blue chest. Another fix that is very likely to work just fine is to connect all 10 train-loading inserters together with a red wire, repeat for each cargo wagon.
 
 # Fun Facts
 - If you set up a train schedule yourself and route the train to the provider, any item conditions like "Iron >= 234" will get output to the LTN stop output (yellow combinator) when the train is on the way to the station. If you are already at the station and want to update the signal you'd have to tell the train to go to some other stop then back to the provider to reset the station's requests to match the new schedule conditions. This is kinda useful if you as the player want to move a couple wagons of stuff around manually (play-tested) or if you want to use a non-LTN train with this provider (not play-tested).
 - I used techniques I learned from [this video](https://youtu.be/anbbAq--ewU) by @fooluaintblack to set item filters and hand stack sizes for inserters which greatly improved the precision of the design.
+
 
