@@ -23,7 +23,7 @@ A factorio blueprint design for a sophisticated train stop that can dynamically 
 - COOLDOWN SETTING: There's a cooldown timer that kicks out the train after an inactivity cooldown. The train leaves the station if the cooldown timer ever counts up to the threshold number of ticks, and the cooldown timer resets to 0 whenever the cargo inventory changes. There are two combinators that control the timeout threshold used to kick out a train after an inactivity cooldown. The first one is the decider that outputs a GREEN signal. The second one is a decider two tiles to the side that outputs a T signal. The default cooldown is 600 ticks or 30 seconds. The cooldown should be long enough that a bot carrying any item to a requester / buffer chest has time to get and drop off the item from wherever the item is stored. But it also sets the amount of time the train sits in the station before leaving if its requests can't be 100% fullfilled.
 
 
-## Very Important Settings
+## ⚠️ Very Important Settings ⚠️
 - PERFECT LOADING IS IMPOSSIBLE / INFEASIBLE: If you request 2 stacks of iron for example, and LTN schedules this stop to provide it, you will get a half-stack in each of 4 wagons assuming it uses a 4-wagon train. This is fine but it demonstrates that wagon slots in general will be under-utilized. If you request a bunch of items of mixed types and quantities, this fact means the train might not get all the items requested because LTN may assume optimally dense slot usage. Therefore in the schedule LTN generates for the train, the train might fail the loading condition of getting all the items it wants, and it will get stuck. There are 3 possible fixes for this:
   1. Only use 1-wagon trains with this stop
   2. Change the LTN stop timeout setting
